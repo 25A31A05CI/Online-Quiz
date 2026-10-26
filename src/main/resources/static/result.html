@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Centre | Score report</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page-shell">
+    <header class="topbar">
+        <div class="brand-wrap">
+            <div class="brand-mark" aria-hidden="true">AC</div>
+            <span>Assessment Centre</span>
+        </div>
+        <nav class="topbar-actions" aria-label="Main navigation">
+            <span class="topbar-caption">SCORE REPORT</span>
+            <a class="header-link" href="history.html">Attempt history</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="card result-card">
+            <div class="eyebrow">ASSESSMENT COMPLETE</div>
+            <h1 id="resultTitle">Score report</h1>
+            <p id="resultSubtitle" class="section-caption">Final results, calculated by the assessment server.</p>
+
+            <div class="summary-grid">
+                <div class="summary-tile">
+                    <span class="tile-label">Player</span>
+                    <strong id="playerNameResult">-</strong>
+                </div>
+                <div class="summary-tile">
+                    <span class="tile-label">Correct</span>
+                    <strong id="correctCount">0</strong>
+                </div>
+                <div class="summary-tile">
+                    <span class="tile-label">Incorrect</span>
+                    <strong id="incorrectCount">0</strong>
+                </div>
+                <div class="summary-tile">
+                    <span class="tile-label">Unanswered</span>
+                    <strong id="unansweredCount">0</strong>
+                </div>
+                <div class="summary-tile">
+                    <span class="tile-label">Score</span>
+                    <strong id="scoreValue">0</strong>
+                </div>
+                <div class="summary-tile">
+                    <span class="tile-label">Percentage</span>
+                    <strong id="percentageValue">0%</strong>
+                </div>
+            </div>
+
+            <div id="resultMessage" class="result-message">Your performance summary will appear here.</div>
+
+            <div class="review-section">
+                <h3>Review Answers</h3>
+                <div id="reviewContainer" class="review-list"></div>
+            </div>
+
+            <button id="playAgainButton" class="primary-button" type="button">Play Again</button>
+        </section>
+    </main>
+</div>
+
+<script src="js/result.js"></script>
+</body>
+</html>

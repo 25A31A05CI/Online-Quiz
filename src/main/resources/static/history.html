@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Centre | Attempt history</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page-shell">
+    <header class="topbar">
+        <div class="brand-wrap">
+            <div class="brand-mark" aria-hidden="true">AC</div>
+            <span>Assessment Centre</span>
+        </div>
+        <nav class="topbar-actions" aria-label="Main navigation">
+            <span class="topbar-caption">RECORDS</span>
+            <a class="header-link" href="index.html">New assessment</a>
+        </nav>
+    </header>
+
+    <main class="container history-page">
+        <section class="history-heading">
+            <div>
+                <div class="eyebrow">COMPLETED ATTEMPTS</div>
+                <h1>Attempt history</h1>
+                <p class="section-caption">Completed assessments are saved locally in the Excel workbook.</p>
+            </div>
+            <div class="history-actions">
+                <button id="refreshHistoryButton" class="secondary-button" type="button">Refresh</button>
+                <a class="primary-button download-button" href="/api/quiz/history/export" download="quiz-history.xlsx">Download Excel</a>
+            </div>
+        </section>
+
+        <section class="history-panel" aria-labelledby="historyTableTitle">
+            <div class="history-panel-heading">
+                <h2 id="historyTableTitle">Candidate records</h2>
+                <span id="recordCount" class="session-status">Loading records...</span>
+            </div>
+            <div id="historyMessage" class="message-box hidden" role="alert" aria-live="polite"></div>
+            <div class="table-wrap">
+                <table class="history-table">
+                    <thead>
+                    <tr>
+                        <th scope="col">Candidate Name</th>
+                        <th scope="col">Score</th>
+                        <th scope="col">Time</th>
+                    </tr>
+                    </thead>
+                    <tbody id="historyRows">
+                    <tr><td colspan="3" class="empty-row">Loading history...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="history-note">The workbook is stored at <code>data/quiz-history.xlsx</code> in the server's working directory.</p>
+        </section>
+    </main>
+</div>
+
+<script src="js/history.js"></script>
+</body>
+</html>

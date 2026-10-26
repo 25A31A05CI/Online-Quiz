@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Centre | Exam</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page-shell">
+    <header class="topbar">
+        <div class="brand-wrap">
+            <div class="brand-mark" aria-hidden="true">AC</div>
+            <span>Assessment Centre</span>
+        </div>
+        <span class="topbar-caption">ASSESSMENT SESSION</span>
+    </header>
+
+    <main class="container quiz-layout">
+        <section class="exam-panel" aria-labelledby="examHeading">
+            <section id="examWelcome" class="exam-welcome">
+                <div class="eyebrow">ASSESSMENT READY</div>
+                <h1 id="examHeading">Review before you begin</h1>
+                <p id="welcomeText" class="section-caption">Your question set is ready. Begin the assessment to request fullscreen.</p>
+                <dl class="exam-details">
+                    <div><dt>Candidate</dt><dd id="candidateName">-</dd></div>
+                    <div><dt>Subject</dt><dd id="quizCategoryBadge">-</dd></div>
+                    <div><dt>Level</dt><dd id="quizDifficultyBadge">-</dd></div>
+                    <div><dt>Questions</dt><dd id="questionTotal">15</dd></div>
+                </dl>
+                <div class="policy-note" role="note">
+                    <strong>Assessment focus</strong>
+                    <p>Leaving this page or exiting fullscreen is recorded. The first detected interruption shows a warning; a second submits your current answers.</p>
+                </div>
+                <button id="beginExamButton" class="primary-button" type="button">Begin assessment <span aria-hidden="true">&#8594;</span></button>
+                <button id="continueWithoutFullscreenButton" class="secondary-button hidden" type="button">Continue without fullscreen</button>
+                <div id="fullscreenFallback" class="inline-notice hidden" role="status" aria-live="polite"></div>
+            </section>
+
+            <section id="examContent" class="quiz-card hidden" aria-label="Assessment questions">
+                <div class="quiz-header">
+                    <div>
+                        <div class="eyebrow">QUESTION</div>
+                        <h2 id="questionCounter">Question 1 of 15</h2>
+                    </div>
+                    <div class="exam-header-meta">
+                        <span class="status-badge" id="activeCategoryBadge">Subject</span>
+                        <div class="timer-box" role="timer" aria-live="off" aria-label="Time remaining for this question">
+                            <span>TIME LEFT</span>
+                            <strong id="questionTimer">00:30</strong>
+                            <div class="timer-track"><div id="timerBar" class="timer-bar"></div></div>
+                        </div>
+                        <span id="violationCount" class="session-status">Interruptions: 0 / 2</span>
+                    </div>
+                </div>
+
+                <div class="progress-wrap" role="progressbar" aria-label="Assessment progress" aria-valuemin="0" aria-valuemax="15" aria-valuenow="1">
+                    <div id="progressBar" class="progress-bar"></div>
+                </div>
+
+                <div class="question-box">
+                    <p id="questionText" class="question-text" tabindex="-1">Loading question...</p>
+                </div>
+
+                <div id="answerOptions" class="answer-options" aria-live="polite"></div>
+
+                <div class="quiz-actions">
+                    <button id="prevButton" class="secondary-button" type="button">Previous</button>
+                    <button id="skipButton" class="ghost-button" type="button">Skip question</button>
+                    <button id="nextButton" class="primary-button" type="button">Next <span aria-hidden="true">&#8594;</span></button>
+                    <button id="submitButton" class="primary-button hidden" type="button">Submit assessment</button>
+                </div>
+                <button id="resumeFullscreenButton" class="text-button hidden" type="button">Return to fullscreen</button>
+            </section>
+
+            <div id="quizMessage" class="message-box hidden" role="alert" aria-live="assertive"></div>
+        </section>
+    </main>
+</div>
+
+<script src="js/quiz.js"></script>
+</body>
+</html>

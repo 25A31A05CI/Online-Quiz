@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Centre | Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="page-shell">
+    <header class="topbar">
+        <div class="brand-wrap">
+            <div class="brand-mark" aria-hidden="true">AC</div>
+            <span>Assessment Centre</span>
+        </div>
+        <nav class="topbar-actions" aria-label="Main navigation">
+            <span class="topbar-caption">ONLINE KNOWLEDGE CHECK</span>
+            <a class="header-link" href="history.html">Attempt history</a>
+        </nav>
+    </header>
+
+    <main class="container landing-layout">
+        <section class="landing-intro" aria-labelledby="pageTitle">
+            <div class="eyebrow">COURSE ASSESSMENT</div>
+            <h1 id="pageTitle">Assessment<br>portal</h1>
+            <p class="subtitle">Choose a subject and difficulty to begin a 15-question knowledge check. Your answers are evaluated by the quiz server.</p>
+            <dl class="assessment-facts">
+                <div><dt>15</dt><dd>questions per attempt</dd></div>
+                <div><dt>4</dt><dd>choices per question</dd></div>
+                <div><dt>1</dt><dd>submission per attempt</dd></div>
+            </dl>
+        </section>
+
+        <section class="card home-card" aria-labelledby="setupTitle">
+            <div class="section-heading">
+                <div class="eyebrow">CANDIDATE DETAILS</div>
+                <h2 id="setupTitle">Set up your assessment</h2>
+                <p class="section-caption">Enter your details and select the assessment level.</p>
+            </div>
+            <form id="quizForm" novalidate>
+                <div class="field-group">
+                    <label for="playerName">Your name</label>
+                    <input id="playerName" name="playerName" type="text" maxlength="50" placeholder="Enter your name" required>
+                </div>
+
+                <div class="field-group">
+                    <label for="category">Quiz category</label>
+                    <select id="category" name="category" required>
+                        <option value="">Choose a category</option>
+                    </select>
+                </div>
+
+                <div class="field-group">
+                    <label for="difficulty">Difficulty</label>
+                    <select id="difficulty" name="difficulty" required>
+                        <option value="">Select difficulty</option>
+                        <option value="EASY">Easy</option>
+                        <option value="MEDIUM">Medium</option>
+                        <option value="HARD">Hard</option>
+                    </select>
+                </div>
+
+                <button id="startButton" class="primary-button" type="submit">Start Quiz</button>
+            </form>
+
+            <div id="messageBox" class="message-box hidden" role="alert" aria-live="polite"></div>
+            <p class="form-note">The assessment opens on the next screen. Fullscreen is requested when you begin.</p>
+        </section>
+    </main>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>

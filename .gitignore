@@ -1,0 +1,5 @@
+target/
+data/quiz-history.xlsx
+.idea/
+*.iml
+.DS_Store
